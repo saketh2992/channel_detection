@@ -94,7 +94,7 @@ st.write("Here is the downloaded data:")
 st.dataframe(df)
 
 # User input for the channel durations (start and end)
-with st.sidebar():
+with st.sidebar:
   start_duration = st.slider("Start duration for channel:", min_value=5, max_value=100, value=50)
   end_duration = st.slider("End duration for channel:", min_value=1, max_value=start_duration, value=30)
 
