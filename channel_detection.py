@@ -14,7 +14,7 @@ class NiftyCandlestickChart:
         self.time_dict = {i: timestamp for i, timestamp in enumerate(self.df['Datetime'].sort_values())}
         self.reverse_time_dict = {v: k for k, v in self.time_dict.items()}
         
-    def find_clusters(self, arr, price_tolerance=1.0):
+    def find_clusters(self, arr, tolerance=1.0):
         clusters = []
         current_cluster = [arr[0]]
         for i in range(1, len(arr)):
