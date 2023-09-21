@@ -18,7 +18,7 @@ class NiftyCandlestickChart:
         clusters = []
         current_cluster = [arr[0]]
         for i in range(1, len(arr)):
-            if abs(arr[i] - arr[i - 1]) <= price_tolerance:
+            if abs(arr[i] - arr[i - 1]) <= tolerance:
                 current_cluster.append(arr[i])
             else:
                 if len(current_cluster) > 1:
