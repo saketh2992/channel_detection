@@ -60,8 +60,8 @@ class NiftyCandlestickChart:
         # Print R-squared values
         st.write(f"R-squared value for the upper channel line: {r2_high:.4f}")
         st.write(f"R-squared value for the lower channel line: {r2_low:.4f}")
-        ax.plot(X, upper_line, color='blue', linewidth=3)
-        ax.plot(X, lower_line, color='orange', linewidth=3)
+        ax.plot(X, upper_line, color='black', linewidth=2)
+        ax.plot(X, lower_line, color='black', linewidth=2)
 
         ax.set_xticks(list(self.reverse_time_dict.values())[::len(self.reverse_time_dict)//10])
         ax.set_xticklabels([str(self.time_dict[k]) for k in ax.get_xticks()], rotation=45)
@@ -95,7 +95,7 @@ st.dataframe(df)
 
 # User input for the channel durations (start and end)
 with st.sidebar:
-  start_duration = st.slider("Start duration for channel:", min_value=5, max_value=100, value=50)
+  start_duration = st.slider("Start duration for channel:", min_value=5, max_value=len(df), value=50)
   end_duration = st.slider("End duration for channel:", min_value=1, max_value=start_duration, value=30)
 
 # Generate the candlestick chart with channel lines
