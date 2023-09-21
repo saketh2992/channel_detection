@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 import yfinance as yf
 from tqdm import tqdm
+from scipy.signal import find_peaks
 
 class NiftyCandlestickChart:
     def __init__(self, df):
