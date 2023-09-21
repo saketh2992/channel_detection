@@ -96,7 +96,7 @@ st.dataframe(df)
 # User input for the channel durations (start and end)
 with st.sidebar:
   start_duration = st.slider("Start duration for channel:", min_value=5, max_value=len(df), value=50)
-  end_duration = st.slider("End duration for channel:", min_value=1, max_value=start_duration, value=30)
+  end_duration = st.slider("End duration for channel:", min_value=1, max_value=start_duration, value=1)
 
 # Generate the candlestick chart with channel lines
 st.write(f"Generating the candlestick chart with channel lines for {ticker}...")
